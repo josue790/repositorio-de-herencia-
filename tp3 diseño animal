@@ -1,0 +1,38 @@
+class Animal:
+    def _init_(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+    
+    def emitir_sonido(self):
+        print("Sonido")
+    
+    def imprimir_detalles(self):
+        print("Nombre: {self.nombre}")
+        print("Edad: {self.edad}")
+
+class Perro(Animal):
+    def emitir_sonido(self):
+        print("Guauu guauu!")
+    
+    def imprimir_detalles(self):
+        super().imprimir_detalles()
+        self.emitir_sonido()
+
+class Gato(Animal):
+    def emitir_sonido(self):
+        print("Miauuuuuuuuu")
+    
+    def imprimir_detalles(self):
+        super().imprimir_detalles()
+        self.emitir_sonido()
+        
+
+if __name__ == "__main__":
+    print ("El nombre del perro es Max ")
+    print ("tiene 5 meses")
+    print ("sonido caracteristico es: guau guau guauuu")  
+    print()
+    print ("El nombre del michi es luna, ")
+    print ("tiene 2 años")
+    print ("su sonido caracteristico es: miau miau miau miauuuu")
+    print()
