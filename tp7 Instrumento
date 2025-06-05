@@ -1,0 +1,12 @@
+class Instrumento:
+    def _init_(self, nombre, material):
+        self.nombre = nombre
+        self.material = material
+    def tipo_sonido(self):
+        print("El {self.nombre} produce un sonido armónico.")
+class Guitarra(Instrumento):
+    def tocar_nota(self):
+        print("Tocando una nota de guitarra: ♫ rannnn ♫")
+class Piano(Instrumento):
+    def tocar_nota(self):
+        print("Tocando una nota de piano: ♫ pimmmm.. pimmm.. pimmmm.. ♫")
