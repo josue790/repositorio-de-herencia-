@@ -1,0 +1,26 @@
+from datetime import datetime
+
+class Producto:
+    def _init_(self, nombre, precio, vencimiento):
+        self.nombre = nombre
+        self.precio = precio
+        self.vencimiento = datetime.strptime(vencimiento, "año-mes-dia")
+
+    def mostrar_info(self):
+        print("{self.nombre} - {self.precio:.2} (Vence: {self.vencimiento.date()})")
+
+
+class ProductoAlimenticio(Producto):
+    def aplicar_descuento(self):
+        hoy = datetime.now()
+        dias = (self.vencimiento - hoy).days
+        if dias < 5:
+            return self.precio * 0.5
+        return self.precio
+
+
+class ProductoElectronico(Producto):
+    def aplicar_descuento(self, oferta=False):
+        if oferta:
+            return self.precio * 0.9
+        return self.precio
