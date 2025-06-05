@@ -1,0 +1,16 @@
+class Pago:
+    def init(self, monto, fecha):
+        self.monto = monto
+        self.fecha = fecha
+    def mostrar_detalles(self):
+        print("Monto, Fecha ")
+class PagoTarjeta(Pago):
+    def procesar_pago(self):
+        print("Procesando pago con tarjeta...")
+    def generar_recibo(self):
+        print("Recibo generado para tarjeta.")
+class Pago_Mercado_Pgo(Pago):
+    def procesar_pago(self):
+        print("Procesando pago con mercado pago...")
+    def generar_recibo(self):
+        print("Recibo generado para mercado pago.")
