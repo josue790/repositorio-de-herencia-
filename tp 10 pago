@@ -1,16 +1,12 @@
 class Pago:
-    def init(self, monto, fecha):
+    def __init__(self, monto, fecha):
         self.monto = monto
         self.fecha = fecha
-    def mostrar_detalles(self):
-        print("Monto, Fecha ")
+    def mostrar(self):
+        print("Monto:", self.monto, "Fecha:", self.fecha)
 class PagoTarjeta(Pago):
-    def procesar_pago(self):
-        print("Procesando pago con tarjeta...")
-    def generar_recibo(self):
-        print("Recibo generado para tarjeta.")
-class Pago_Mercado_Pgo(Pago):
-    def procesar_pago(self):
-        print("Procesando pago con mercado pago...")
-    def generar_recibo(self):
-        print("Recibo generado para mercado pago.")
+    def procesar(self):
+        print("Pago con tarjeta realizado.")
+class PagoMercadoPago(Pago):
+    def procesar(self):
+        print("Pago con Mercado Pago realizado.")
