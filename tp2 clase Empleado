@@ -1,34 +1,15 @@
 class Empleado:
-    def _init_(self, nombre, salario, cargo):
+    def __init__(self, nombre, salario, cargo):
         self.nombre = nombre
         self.salario = salario
         self.cargo = cargo
-    
-    def mostrar_detalles(self):
-        print("Nombre: {self.nombre}")
-        print("Salario: {self.salario}")
-        print("Cargo: {self.cargo}")
-    
-    def calcular_aumento(self):
-        pass  
+    def mostrar(self):
+        print(self.nombre, "-", self.cargo, "- Salario:", self.salario)
 class Gerente(Empleado):
-    def _init_(self, nombre, salario, cargo, departamento):
-        super()._init_(nombre, salario, cargo)
-        self.departamento = departamento
-
     def calcular_aumento(self):
-        aumento = self.salario * 0.10
-        self.salario = aumento
-        print("Aumento para {self.nombre} (Gerente): {aumento}")
-        return self.salario
-
+        self.salario = self.salario + (self.salario * 0.10)
+        print("Aumento gerente:", self.salario)
 class EmpleadoTemporal(Empleado):
-    def _init_(self, nombre, salario, cargo, duracion_contrato):
-        super()._init_(nombre, salario, cargo)
-        self.duracion_contrato = duracion_contrato
-
     def calcular_aumento(self):
-        aumento = self.salario * 0.05
-        self.salario = aumento
-        print("Aumento para {self.nombre} (Empleado Temporal): {aumento}")
-        return self.salario
+        self.salario = self.salario + 100
+        print("Aumento empleado temporal:", self.salario)
