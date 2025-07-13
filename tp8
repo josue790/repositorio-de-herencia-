@@ -1,12 +1,11 @@
 class Transporte:
-    def init(self, capacidad, velocidad_maxima):
+    def __init__(self, capacidad, velocidad):
         self.capacidad = capacidad
-        self.velocidad_maxima = velocidad_maxima
-    def mostrar_info(self):
-        print("Capacidad:capacidad, Velocidad Máxima: km/h")
+        self.velocidad = velocidad
+    def tiempo_viaje(self, distancia):
+        return distancia / self.velocidad
 class Avion(Transporte):
-    def calcular_tiempo_viaje(self, distancia):
-        return distancia / self.velocidad_maxima
+    pass  
 class Barco(Transporte):
-    def calcular_tiempo_viaje(self, distancia):
-        return distancia / self.velocidad_maxima
+    pass
+
