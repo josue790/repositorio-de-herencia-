@@ -1,15 +1,11 @@
 class Animal:
-    def __init__(self, nombre, edad):
+    def __init__(self, nombre):
         self.nombre = nombre
-        self.edad = edad
     def emitir_sonido(self):
-        print("Sonido")
-    def imprimir_detalles(self):
-        print("Nombre:", self.nombre, "Edad:", self.edad)
-        self.emitir_sonido()
+        print("Hace un sonido")
 class Perro(Animal):
     def emitir_sonido(self):
-        print("Guau guau!")
+        print("el sonido es Guau!")
 class Gato(Animal):
     def emitir_sonido(self):
-        print("Miau miau!")
+        print("el sonido es Miau!")
