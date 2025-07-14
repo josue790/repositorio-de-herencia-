@@ -7,9 +7,7 @@ class Persona:
         print("Edad:", self.edad)
 class Estudiante(Persona):
     def mostrar_info(self):
-        super().mostrar_info()
-        print(self.nombre, "es un estudiante.")
+        print(self.nombre, "es estudiante.")
 class Profesor(Persona):
     def mostrar_info(self):
-        super().mostrar_info()
-        print(self.nombre, "es un profesor.")
+        print(self.nombre, "es profesor.")
