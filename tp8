@@ -1,11 +1,9 @@
 class Transporte:
-    def __init__(self, capacidad, velocidad):
-        self.capacidad = capacidad
+    def __init__(self, velocidad):
         self.velocidad = velocidad
     def tiempo_viaje(self, distancia):
         return distancia / self.velocidad
 class Avion(Transporte):
-    pass  
+    pass
 class Barco(Transporte):
     pass
-
