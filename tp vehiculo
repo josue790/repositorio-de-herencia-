@@ -3,12 +3,11 @@ class Vehiculo:
         self.marca = marca
         self.modelo = modelo
         self.año = año
-        self.consumo = consumo  # litros por 100 km
-
+        self.consumo = consumo  
     def eficiencia(self):
-        return 100 / self.consumo  # km por litro
+        return 100 / self.consumo  
     def combustible(self, km):
-        return (self.consumo * km) / 100  # litros
+        return (self.consumo * km) / 100  
 class Automovil(Vehiculo):
     pass
 class Motocicleta(Vehiculo):
