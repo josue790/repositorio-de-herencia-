@@ -1,19 +1,10 @@
 class Producto:
-    def __init__(self, nombre, precio, vencimiento):
+    def __init__(self, nombre, precio):
         self.nombre = nombre
         self.precio = precio
-        self.vencimiento = vencimiento 
-    def mostrar(self):
-        print("Nombre:", self.nombre)
-        print("Precio:", self.precio)
-        print("Vence:", self.vencimiento)
 class ProductoAlimenticio(Producto):
     def aplicar_descuento(self):
-        print("Descuento del 50%")
-        return self.precio * 0.5
+        return self.precio - 50 
 class ProductoElectronico(Producto):
-    def aplicar_descuento(self, hay_oferta):
-        if hay_oferta:
-            print("Descuento del 10% por oferta")
-            return self.precio * 0.9
-        return self.precio
+    def aplicar_descuento(self):
+        return self.precio - 100  
